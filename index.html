@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günlük Uygulaması</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loginPage" class="container">
+        <h1>Günlüğüm</h1>
+        <input type="text" id="username" placeholder="Kullanıcı Adı">
+        <input type="password" id="password" placeholder="Şifre">
+        <button id="loginBtn">Giriş Yap</button>
+        <p>Hesabınız yok mu? <a href="#" id="signupLink">Kaydolun</a></p>
+    </div>
+    <div id="signupPage" class="container" style="display: none;">
+        <h1>Kaydol</h1>
+        <input type="text" id="newUsername" placeholder="Yeni Kullanıcı Adı">
+        <input type="password" id="newPassword" placeholder="Yeni Şifre">
+        <button id="signupBtn">Kaydol</button>
+        <p>Zaten bir hesabınız var mı? <a href="#" id="loginLink">Giriş yapın</a></p>
+    </div>
+    <div id="diaryPage" class="container" style="display: none;">
+        <h1>Günlüğüm</h1>
+        <div id="entries"></div>
+        <button id="addEntryBtn">Yeni Giriş Ekle</button>
+        <button id="logoutBtn" class="logout-btn">Çıkış Yap</button>
+    </div>
+    <div id="entryModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Yeni Giriş</h2>
+            <textarea id="entryContent" rows="10"></textarea>
+            <button id="saveEntryBtn">Kaydet</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
